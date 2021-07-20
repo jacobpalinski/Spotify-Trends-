@@ -28,7 +28,7 @@ with date_distribution:
     
     song_data = get_data()
 
-    genre = st.selectbox('Which Genre?',['Rock', 'Country', 'Rap', 'R&B', 'Trance'])
+    genre = st.sidebar.selectbox('Which Genre?',['Rock', 'Country', 'Rap', 'R&B', 'Trance'])
     fig,ax=plt.subplots(figsize=(10,5))
     ax.hist('release_year',data=song_data[song_data['genre'] == genre],edgecolor='black')
     st.pyplot(fig)
@@ -48,7 +48,7 @@ with correlation_plot:
 with ml_model:
     st.subheader('Detecting Feature Importance')
 
-    n_estimators=st.slider('n_estimators of the model', min_value=10, max_value=300, value=20, step=10)
+    n_estimators=st.sidebar.slider('n_estimators of the model', min_value=10, max_value=300, value=20, step=10)
     
     predictors = ['track.explicit','danceability','energy','loudness','speechiness','acousticness','instrumentalness',
            'valence','tempo','duration','release_year']

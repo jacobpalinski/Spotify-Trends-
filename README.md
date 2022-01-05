@@ -43,6 +43,7 @@ the average beat duration.
 2. Cleaned Data: Deleted irrelevant columns, dropped duplicates, changed data types, removed null values using Pandas
 3. Data Analysis: Developed visualisations and performed statistical analysis of features.
 4. Developed Predictive Model for Song Popularity
+5. Developed interactive streamlit dashboard
 
 Libraries Used: Numpy, Pandas, Matplotlib, Seaborn, Scipy.Stats, Requests
 Model: RandomForestRegressor
